@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --textcolor: rgb(59, 92, 92);
+  }
+
+header ul, footer ul {
+    list-style-type: none;
+}
+
+header ul li, footer ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+header ul li a, footer ul li a {
+    color: var(--textcolor);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Adjust position */
+header ul, footer ul {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+header h1, footer h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:grey;
+
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.headerTextStyle {
+    color:black;
+    background-color: var(--textcolor);
+}
+
+.headerPicture {
+   /* width: 400px;*/
+   /*object-fit: fill;*/
+   max-width: 100%;
+   min-width: 200px;
+}
+
+.headerFigCaption {
+    background-color: var(--textcolor);
+    color: black;
+    min-width: 200px;
+    font-size: 20px;
+    /*float: right;*/
+    position: absolute;
+    top: 35%;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    /*top: 55%;*/
+    /* right: 5%; */
+    top: 20vw;
+    right: 10vw;
+}
+
+body {
+    /*background-color: #d9dcd6;*/
+    background-color: white;
+}
+
+.meStyle {
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutMeSyle {
+    padding: 50px;
+}
+
+.asideStyle {
+    flex: 1;
+    /* Debugging boundary */
+    background-color: white;
+    padding: 20px;
+    color: var(--textcolor);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: right;
+    border-right: 4px solid;
+    width:300px;
+}
+  
+.sectionStyle {
+    flex: 3;
+    /*background-color: #fff*/;
+    padding: 20px;
+    color: var(--textcolor);
+    font-size: 15px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.mainContentStyle {
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row;
+    align-content: right;
+}
+
+.footerSectionStyle {
+    flex: 3;
+}
+
+.figcaption {
+    background-color: var(--textcolor);
+    color: black;
+    min-width: 120px;
+    font-size: 20px;
+    position: absolute;
+    top: 65%;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+}
+
+.figure {
+    position: relative;
+    background-color: white;
+    opacity: 0.8;
+    filter: alpha(opacity=40);
+}
+
+.figureGroupFlex {
+    display:flex;
+    flex-wrap:wrap;
+    flex-flow:column;
+    justify-content:center;
+    background-color: white;
+    align-items: flex-start;
+    padding: 15px;
+    flex: 3;
+    gap: 100px;
+}
+
+.figureFlex {
+    display:flex;
+    flex-wrap:wrap;
+    flex-flow:row;
+    /*justify-content:center;*/
+    background-color: white;
+}
+
+.figureGroupFlex .imageLeft {
+    align-self: left;
+}
+
+.figure:hover {
+    background-color: bisque;
+    transform: scale(1.1);
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+
+@media screen and (max-width: 768px) {
+    .figureGroupFlex {
+        flex-direction: row;
+    }
+
+    .mainContentStyle {
+        flex-direction: row;
+    }
+
+    .headerFigCaption {
+        display: none;
+    }
+}
